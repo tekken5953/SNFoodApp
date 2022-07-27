@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">홈</string>
+    <string name="search">검색</string>
+    <string name="post">등록</string>
+</resources>
