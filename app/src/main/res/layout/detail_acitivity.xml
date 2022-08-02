@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailAcitivity">
+
+    <ImageView
+        android:id="@+id/detailBackIv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/detailNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/pretendardvariable"
+        android:text="가게 이름"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detailBackIv"
+        app:layout_constraintStart_toEndOf="@id/detailBackIv"
+        app:layout_constraintTop_toTopOf="@+id/detailBackIv" />
+
+    <TextView
+        android:id="@+id/detailVisitDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/pretendardvariable"
+        android:text="2022-07-30"
+        app:layout_constraintStart_toStartOf="@id/detailNameTv"
+        app:layout_constraintTop_toBottomOf="@id/detailNameTv" />
+
+    <ImageView
+        android:id="@+id/detailBookMarkIv"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/bookmark_outline"
+        app:layout_constraintBottom_toBottomOf="@id/detailBackIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detailBackIv"
+        app:tint="@color/red" />
+
+    <ImageView
+        android:id="@+id/detailShareIv"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="15dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@id/detailBookMarkIv"
+        app:layout_constraintEnd_toStartOf="@id/detailBookMarkIv"
+        app:layout_constraintTop_toTopOf="@id/detailBookMarkIv"
+        app:tint="@color/black" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/detailViewPager2"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/yellow"
+        android:scrollIndicators="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailVisitDateTv" />
+
+    <TextView
+        android:id="@+id/detailAddressTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/pretendardvariable"
+        android:text="경기도 성남시 중원구 산성대로 80길 16, 2층"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@id/detailViewPager2"
+        app:layout_constraintTop_toBottomOf="@id/detailViewPager2" />
+
+    <ImageView
+        android:id="@+id/detailRateIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/star"
+        app:layout_constraintBottom_toBottomOf="@+id/detailAddressTv"
+        app:layout_constraintEnd_toStartOf="@id/detailRateTv"
+        app:layout_constraintTop_toTopOf="@id/detailAddressTv"
+        app:tint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/detailRateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/pretendardvariable"
+        android:text="4.5"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/detailRateIv"
+        app:layout_constraintEnd_toEndOf="@id/detailViewPager2"
+        app:layout_constraintTop_toTopOf="@+id/detailRateIv" />
+
+    <ScrollView
+        android:id="@+id/detailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/detailBottomLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailAddressTv">
+
+        <TextView
+            android:id="@+id/detailCommentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendardvariable"
+            android:text="코멘트 내용"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </ScrollView>
+
+    <View
+        android:id="@+id/detailBottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        app:layout_constraintBottom_toTopOf="@+id/detailBottomTr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableRow
+        android:id="@+id/detailBottomTr"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/detailBottomCallTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/pretendardvariable"
+            android:gravity="center"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="전화걸기"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            app:drawableStartCompat="@drawable/call" />
+
+        <TextView
+            android:id="@+id/detailBottomMapTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/pretendardvariable"
+            android:gravity="center"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="지도보기"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="22dp"
+            app:drawableStartCompat="@drawable/map" />
+
+
+    </TableRow>
+</androidx.constraintlayout.widget.ConstraintLayout>

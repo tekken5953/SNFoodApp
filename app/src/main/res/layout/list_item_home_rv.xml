@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_marginBottom="7dp"
-    android:background="@drawable/list_item_home_rv_bg"
-    android:backgroundTint="@color/black">
+    android:background="@drawable/list_item_home_rv_bg">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
